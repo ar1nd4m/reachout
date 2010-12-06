@@ -1,4 +1,5 @@
-.classpath
-.settings
+*/.classpath
+*/.settings
 */WEB-INF/*
+*.cache.png
 
