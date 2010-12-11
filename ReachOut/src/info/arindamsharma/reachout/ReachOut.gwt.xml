@@ -2,6 +2,7 @@
 <module rename-to='reachout'>
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
+  <inherits name='com.google.gwt.json.JSON'/>  
 
   <!-- Compile for IE and Chrome -->
   <!-- If you compile for only one browser, the browser detection javascript is optimised away and then Hosted Mode doesn't work -->

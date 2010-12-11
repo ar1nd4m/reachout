@@ -1,5 +1,6 @@
 package info.arindamsharma.reachout.client;
 
+import info.arindamsharma.reachout.client.fb.JSLoader;
 import info.arindamsharma.reachout.shared.FieldVerifier;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.Window.Location;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
@@ -29,6 +31,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class ReachOut implements EntryPoint {
+	
 	/**
 	 * The message displayed to the user when the server cannot be reached or
 	 * returns an error.
@@ -157,17 +160,31 @@ public class ReachOut implements EntryPoint {
 		MyHandler handler = new MyHandler();
 		sendButton.addClickHandler(handler);
 		nameField.addKeyUpHandler(handler);
+		
+		
+		JSLoader.addFbScript(this);
+	}
+	
+	
+	public void onFacebookLoad() {
+	  Logger.log("msg", true);
 	}
 
-	private void populateDebugInfo(Panel rootPanel) {
+	private void populateDebugInfo(final Panel rootPanel) {
 		Map<String, List<String>> paramsMap = Window.Location.getParameterMap();
-		Grid grid = new Grid(paramsMap.size(), 2);
+		Grid grid = new Grid(paramsMap.size() + 1, 2);
 		int row = 0;
 		for (Entry<String, List<String>> s : paramsMap.entrySet()) {
 			grid.setText(row, 0, s.getKey());
 			grid.setText(row, 1, s.getValue().toString());
 			row++;
 		}
+		grid.setText(row, 0, "Location:");
+		grid.setText(row, 1, Location.getHref());
 		rootPanel.add(grid);
 	}
+	
+	/**
+	 * Wrapper method
+	 */
 }
