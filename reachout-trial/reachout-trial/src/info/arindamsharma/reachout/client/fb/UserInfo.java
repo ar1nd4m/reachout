@@ -36,8 +36,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 
 public class UserInfo {
 
-  private final SaveUserLocationServiceAsync saveService = GWT
-          .create(SaveUserLocationService.class);
+  private final SaveUserLocationServiceAsync saveService =
+      GWT.create(SaveUserLocationService.class);
   private final GetUserLocationServiceAsync getService = GWT.create(GetUserLocationService.class);
   
   private long fbid;
@@ -120,7 +120,6 @@ public class UserInfo {
 
     final MapWidget map = new MapWidget(location, 2);
     map.setSize("100%", "100%");
-    map.setGoogleBarEnabled(true);
     map.setContinuousZoom(true);
     map.setDoubleClickZoom(true);
     map.addControl(new SmallMapControl());
