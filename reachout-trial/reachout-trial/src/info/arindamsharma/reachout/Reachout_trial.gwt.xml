@@ -3,6 +3,7 @@
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
   <inherits name='com.google.gwt.json.JSON'/>
+  <inherits name='com.google.gwt.maps.GoogleMaps' />
   
   <!-- Compile for Firefox and Chrome -->
   <!-- If you compile for only one browser, the browser detection javascript is optimised away and then Hosted Mode doesn't work -->
@@ -19,7 +20,7 @@
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='info.arindamsharma.reachout.client.Reachout_trial'/>
-
+  
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
   <source path='shared'/>

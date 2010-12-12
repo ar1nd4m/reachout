@@ -7,13 +7,23 @@
   
   <!-- Servlets -->
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>info.arindamsharma.reachout.server.GreetingServiceImpl</servlet-class>
+    <servlet-name>saveUserLocationServlet</servlet-name>
+    <servlet-class>info.arindamsharma.reachout.server.service.SaveUserLocationServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>getUserLocationServlet</servlet-name>
+    <servlet-class>info.arindamsharma.reachout.server.service.GetUserLocationServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/reachout_trial/greet</url-pattern>
+    <servlet-name>saveUserLocationServlet</servlet-name>
+    <url-pattern>/reachout_trial/saveUserLocation</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>getUserLocationServlet</servlet-name>
+    <url-pattern>/reachout_trial/getUserLocation</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->

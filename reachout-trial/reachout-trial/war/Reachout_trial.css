@@ -32,3 +32,11 @@ h1 {
 #closeButton {
   margin: 15px 6px 6px;
 }
+
+#dynamicContainer {
+	margin: 10px;
+	border: 2px solid blue;
+	padding: 5px;
+	width: 70%;
+	
+}
