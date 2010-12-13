@@ -10,5 +10,15 @@
 			<attribute name="javadoc_location" value="jar:file:/Users/arindamsharma/reachout/reachout-trial/gwt-maps-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/arindamsharma/reachout/reachout-trial/guice-2.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/arindamsharma/reachout/reachout-trial/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/arindamsharma/reachout/reachout-trial/guice-servlet-2.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/arindamsharma/reachout/reachout-trial/javadoc/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
