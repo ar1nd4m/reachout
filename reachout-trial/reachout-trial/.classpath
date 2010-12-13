@@ -25,5 +25,6 @@
 			<attribute name="javadoc_location" value="file:/Users/arindamsharma/reachout/reachout-trial/guice-javadoc/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gin-1.0.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
