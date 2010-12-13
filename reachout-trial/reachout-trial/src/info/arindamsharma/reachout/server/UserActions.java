@@ -11,12 +11,21 @@ import java.util.List;
 import javax.jdo.PersistenceManager;
 
 import com.google.gwt.core.client.GWT;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
 
 public class UserActions implements SaveUserService, GetUserService {
   private static final String SELECT_USER_ON_FBID = "select from " + UserDataModel.class.getName() + " where fbid == %d";
   
+  private final Provider<PersistenceManager> pmProvider;
+  
+  @Inject
+  public UserActions(Provider<PersistenceManager> pmProvider) {
+    this.pmProvider = pmProvider;
+  }
+  
   private UserDataModel getUserDataModel(long fbid) {
-    PersistenceManager pm = PMF.get().getPersistenceManager();
+    PersistenceManager pm = pmProvider.get();
     String query = String.format(SELECT_USER_ON_FBID, fbid);
     GWT.log("Running query: " + query);
     
@@ -45,7 +54,7 @@ public class UserActions implements SaveUserService, GetUserService {
     } else {
       udm.updateData(user);
     }
-    PersistenceManager pm = PMF.get().getPersistenceManager();
+    PersistenceManager pm = pmProvider.get();
     try {
       pm.makePersistent(udm);
       return true;
