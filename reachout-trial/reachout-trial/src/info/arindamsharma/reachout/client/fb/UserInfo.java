@@ -2,10 +2,10 @@ package info.arindamsharma.reachout.client.fb;
 
 import info.arindamsharma.reachout.client.Logger;
 import info.arindamsharma.reachout.client.Reachout_trial;
-import info.arindamsharma.reachout.client.service.GetUserLocationService;
-import info.arindamsharma.reachout.client.service.GetUserLocationServiceAsync;
-import info.arindamsharma.reachout.client.service.SaveUserLocationService;
-import info.arindamsharma.reachout.client.service.SaveUserLocationServiceAsync;
+import info.arindamsharma.reachout.client.service.GetUserService;
+import info.arindamsharma.reachout.client.service.GetUserServiceAsync;
+import info.arindamsharma.reachout.client.service.SaveUserService;
+import info.arindamsharma.reachout.client.service.SaveUserServiceAsync;
 import info.arindamsharma.reachout.shared.UserData;
 
 import com.google.gwt.core.client.GWT;
@@ -36,9 +36,9 @@ import com.google.gwt.user.client.ui.RootPanel;
 
 public class UserInfo {
 
-  private final SaveUserLocationServiceAsync saveService =
-      GWT.create(SaveUserLocationService.class);
-  private final GetUserLocationServiceAsync getService = GWT.create(GetUserLocationService.class);
+  private final SaveUserServiceAsync saveService =
+      GWT.create(SaveUserService.class);
+  private final GetUserServiceAsync getService = GWT.create(GetUserService.class);
   
   private long fbid;
   private LatLng latLng;

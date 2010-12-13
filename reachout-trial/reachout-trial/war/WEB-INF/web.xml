@@ -8,22 +8,22 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>saveUserLocationServlet</servlet-name>
-    <servlet-class>info.arindamsharma.reachout.server.service.SaveUserLocationServiceImpl</servlet-class>
+    <servlet-class>info.arindamsharma.reachout.server.service.SaveUserServiceImpl</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>getUserLocationServlet</servlet-name>
-    <servlet-class>info.arindamsharma.reachout.server.service.GetUserLocationServiceImpl</servlet-class>
+    <servlet-class>info.arindamsharma.reachout.server.service.GetUserServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
     <servlet-name>saveUserLocationServlet</servlet-name>
-    <url-pattern>/reachout_trial/saveUserLocation</url-pattern>
+    <url-pattern>/reachout_trial/saveUser</url-pattern>
   </servlet-mapping>
   
   <servlet-mapping>
     <servlet-name>getUserLocationServlet</servlet-name>
-    <url-pattern>/reachout_trial/getUserLocation</url-pattern>
+    <url-pattern>/reachout_trial/getUser</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
